@@ -11,13 +11,13 @@
   async function getUserProfile() {
    const profile = await liff.getProfile()
    window.location.replace(
-     `https://docs.google.com/forms/d/e/1FAIpQLSfRK4i9m_Dv8Dt3mdn7NJKgLKPwOsZ8rxBsPb2HkGBVOsdVag/viewform?usp=pp_url
-       &entry.2089218021=${profile.displayName}`
+     `https://docs.google.com/forms/d/e/1FAIpQLSesY5HQd2XrvmZDAE8G5VHTvEeQNlPIKHyG7xOOKiFcc5JRvQ/viewform?usp=pp_url
+      &entry.476506349=${profile.displayName}`
      );
    }
  
   async function main() {
-     await liff.init({ liffId: "1655727994-LP3qnzd5" })
+     await liff.init({ liffId: "1655801760-jpXRNmOx" })
        if (liff.isLoggedIn()) {
          getUserProfile()
        } else {
