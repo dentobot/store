@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head><title>appointment@SmileyDentalClinic</title></head>
+ 
+<body>
+ 
+<script src="https://static.line-scdn.net/liff/edge/versions/2.8.0/sdk.js"></script>
+ 
+<script>
+ 
+  async function getUserProfile() {
+   const profile = await liff.getProfile()
+   window.location.replace(
+     `https://docs.google.com/forms/d/e/1FAIpQLSfRK4i9m_Dv8Dt3mdn7NJKgLKPwOsZ8rxBsPb2HkGBVOsdVag/viewform?usp=pp_url
+       &entry.2089218021=${profile.displayName}`
+     );
+   }
+ 
+  async function main() {
+     await liff.init({ liffId: "1655727994-LP3qnzd5" })
+       if (liff.isLoggedIn()) {
+         getUserProfile()
+       } else {
+         liff.login()
+       }
+   }
+   main()
+ </script>
+ 
+ </body>
+</html>
